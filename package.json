@@ -1,5 +1,5 @@
 {
-  "name": "isaacmorrier-gridsome",
+  "name": "isaac-morrier-gridsome",
   "private": true,
   "scripts": {
     "build": "gridsome build",
