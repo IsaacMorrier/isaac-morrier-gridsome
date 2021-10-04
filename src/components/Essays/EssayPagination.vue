@@ -2,8 +2,8 @@
   <footer>
     <div>
       <g-link
-        :to="`/blog/${prev.slug.current}`"
-        :aria-label="`Previous post: ${next.title}`"
+        :to="`/essays/${prev.slug.current}`"
+        :aria-label="`Previous essay: ${next.title}`"
       >
         <span>previous</span
         >
@@ -12,8 +12,8 @@
     </div>
     <div>
       <g-link
-      :to="`/blog/${next.slug.current}`"
-        :aria-label="`Next post: ${next.title}`"
+      :to="`/essays/${next.slug.current}`"
+        :aria-label="`Next essay: ${next.title}`"
       >
         <span>next</span
         >
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'PostPagination',
+  name: 'EssayPagination',
   props: {
     prev: Object,
     next: Object,
