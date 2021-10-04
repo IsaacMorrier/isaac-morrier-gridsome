@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="aka-section-heading">Projects</h1>
+    <h1>Design</h1>
     <ProjectList
       v-if="$page.projects.edges.length"
       :projects="$page.projects.edges"
@@ -10,8 +10,6 @@
     </div>
     <Pager
       ariaLabel="Projects pagination navigation"
-      class="aka-pagination-navigation flex flex-row items-center justify-center py-4 mt-4 w-full"
-      linkClass="font-medium mx-2 p-2"
       :info="$page.projects.pageInfo"
     />
   </Layout>
@@ -54,7 +52,7 @@ export default {
     ProjectList,
   },
   metaInfo: {
-    title: 'Projects',
+    title: 'Design',
   },
 }
 </script>

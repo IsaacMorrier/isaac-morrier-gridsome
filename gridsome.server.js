@@ -22,19 +22,19 @@ module.exports = function(api) {
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(createPagesQuery)
 
-    const allSanityPosts = data.allSanityPost.edges
+    const allSanityEssays = data.allSanityEssay.edges
     const allSanityProjects = data.allSanityProject.edges
 
     createPagesWithPagination({
-      edges: allSanityPosts,
-      component: './src/templates/Post.vue',
-      path: 'blog',
+      edges: allSanityEssays,
+      component: './src/templates/Essay.vue',
+      path: '/essays',
       createPage,
     })
     createPagesWithPagination({
       edges: allSanityProjects,
       component: './src/templates/Project.vue',
-      path: 'projects',
+      path: '',
       createPage,
     })
   })

@@ -1,18 +1,17 @@
 <template>
   <Layout>
-    <div class="aka-project">
+    <div>
       <header>
-        <h1 class="font-black leading-loose text-4xl mt-16 mb-10">
+        <h1>
           {{ $page.project.title }}
         </h1>
       </header>
       <AppImage
         v-if="$page.project.mainImage"
-        class="project-banner"
         :main-image="$page.project.mainImage"
       />
 
-      <div class="project-content container mt-10 px-0">
+      <div>
         <BlockContent :blocks="$page.project._rawBody" />
         <ProjectPagination
           :next="$page.next"
@@ -73,9 +72,3 @@ export default {
   },
 }
 </script>
-
-<style lang="css" scoped>
-.project-content p {
-  @apply text-lg leading-relaxed px-0;
-}
-</style>

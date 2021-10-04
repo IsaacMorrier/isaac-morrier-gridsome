@@ -2,7 +2,7 @@ const gql = String.raw
 
 const createPagesQuery = gql`
   {
-    allSanityPost(sortBy: "publishedAt") {
+    allSanityEssay(sortBy: "publishedAt") {
       edges {
         node {
           id
@@ -45,7 +45,7 @@ const createPagesWithPagination = ({ edges, path, component, createPage }) => {
 
     createPage({
       component,
-      path: `/${path}/${node.slug.current}`,
+      path: `${path}/${node.slug.current}`,
       context: {
         id,
         prevID,

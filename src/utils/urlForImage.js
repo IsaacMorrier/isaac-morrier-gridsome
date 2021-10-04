@@ -1,4 +1,3 @@
-// source: https://github.com/sanity-io/sanity-template-gridsome-blog
 import urlBuilder from '@sanity/image-url'
 
 const urlForImage = (source, data) => {

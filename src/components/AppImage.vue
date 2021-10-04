@@ -12,7 +12,6 @@
     />
     <AppImagePlaceholder
       v-else-if="placeholder"
-      class="w-full h-full absolute"
     />
   </div>
 </template>

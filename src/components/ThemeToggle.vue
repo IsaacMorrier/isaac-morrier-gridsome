@@ -1,6 +1,5 @@
 <template>
   <button
-    class="p-4 ml-4 -mr-4 focus:outline-none"
     @click="handleClick"
     :aria-label="`Current theme is ${mode}, next theme is ${nextThemeMode}`"
   >

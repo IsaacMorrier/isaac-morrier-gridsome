@@ -1,8 +1,8 @@
 <template>
-  <div class="layout flex flex-col relative min-h-screen">
-    <header class="flex items-center mb-6 h-20">
-      <div class="container flex items-center justify-between">
-        <div class="app-logo">
+  <div>
+    <header>
+      <div>
+        <div>
           <g-link to="/">
             <strong>{{ $static.metadata.siteName }}</strong>
           </g-link>
@@ -11,7 +11,7 @@
         <ThemeToggle />
       </div>
     </header>
-    <div class="app-slot container mb-8">
+    <div>
       <slot />
     </div>
     <AppFooter />
@@ -41,7 +41,5 @@ export default {
 </script>
 
 <style>
-.container {
-  @apply relative mx-auto w-full;
-}
+
 </style>

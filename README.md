@@ -2,10 +2,9 @@
 
 Gridsome + Sanity site based on Akarui
 
-## Akarui Features
+## Features
 
 - Sanity.io GraphQL data fetching via gridsome-source-sanity plugin
-- Tailwind CSS
 - Local images downloaded from Sanity via @noxify/gridsome-plugin-remote-image (temporary solution)
 - Dark and light theme (saved in local storage and auto detected on first load)
 

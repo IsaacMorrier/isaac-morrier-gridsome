@@ -1,7 +1,6 @@
 require('dotenv').config({
   path: '.env',
 })
-const tailwind = require('tailwindcss')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
@@ -9,7 +8,7 @@ module.exports = {
   css: {
     loaderOptions: {
       postcss: {
-        plugins: [tailwind()],
+        plugins: [],
       },
     },
   },

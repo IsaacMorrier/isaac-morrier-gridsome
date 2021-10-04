@@ -1,5 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 const remCalc = (value, base = 16) => {
   return `${value / base}rem`
 }
@@ -27,7 +25,7 @@ module.exports = {
       footer: 'var(--color-footer)',
     },
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      sans: ['Inter', 'sans-serif'],
       display: ['Inter', 'sans-serif'],
       body: ['Inter', 'sans-serif'],
     },
