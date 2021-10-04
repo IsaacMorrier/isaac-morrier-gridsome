@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    <h1>Design</h1>
     <ProjectList
       v-if="$page.projects.edges.length"
       :projects="$page.projects.edges"
