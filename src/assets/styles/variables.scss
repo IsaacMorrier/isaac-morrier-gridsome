@@ -1,0 +1,37 @@
+@function rem-calc($n) {
+    $n: $n * .0625rem;
+    @return $n;
+}
+
+@function vw-calc($n) {
+    $n: $n * .267vw;
+    @return $n;
+}
+
+@function vw-calc-lg($n) {
+    $n: $n * .07vw;
+    @return $n;
+}
+
+$global-margin: .75rem;
+$global-gutter: .75rem;
+$global-margin-lg: 2rem;
+$global-gutter-lg: 2rem;
+
+$breakpoint-md: 37.5;
+$breakpoint-lg: 48;
+$breakpoint-xl: 64;
+$breakpoint-xxl: 120;
+$cols: 12;
+
+@mixin breakpoint($point) {
+    @if $point == md {
+      @media (min-width: $breakpoint-md * 1rem) { @content ; }
+   }
+    @if $point == lg {
+      @media (min-width: $breakpoint-lg * 1rem) { @content ; }
+   }
+    @else if $point == xl {
+      @media (min-width: $breakpoint-xl * 1rem) { @content ; }
+   }
+ }

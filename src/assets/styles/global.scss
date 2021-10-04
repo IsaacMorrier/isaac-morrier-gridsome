@@ -1,0 +1,30 @@
+@import 'theme.scss';
+@import 'variables.scss';
+@import 'grid.scss';
+@import 'typography.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+hr {
+    border-top: 1px solid var(--color-text);
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+img {
+    max-width: 100%;
+}

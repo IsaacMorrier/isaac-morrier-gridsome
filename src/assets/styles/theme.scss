@@ -11,12 +11,10 @@
   --color-bg: var(--color-white);
   --color-text: var(--color-black);
   --color-card: var(--color-light-gray);
-  --color-footer: var(--color-light-gray);
 }
 
 [data-theme='dark'] {
   --color-bg: #1f1f1f;
   --color-text: var(--color-white);
-  --color-card: var(--color-black);
   --color-footer: var(--color-black);
 }

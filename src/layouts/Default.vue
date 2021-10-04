@@ -2,13 +2,12 @@
   <div>
     <header>
       <div>
-        <div>
-          <g-link to="/">
-            <strong>{{ $static.metadata.siteName }}</strong>
-          </g-link>
-        </div>
         <AppNav />
-        <ThemeToggle />
+        <div class="logo">
+          <h1>
+            <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+          </h1> 
+        </div>
       </div>
     </header>
     <div>
@@ -29,17 +28,20 @@
 <script>
 import AppNav from '@/components/AppNav.vue'
 import AppFooter from '@/components/AppFooter.vue'
-import ThemeToggle from '@/components/ThemeToggle.vue'
 
 export default {
   components: {
     AppNav,
     AppFooter,
-    ThemeToggle,
   },
 }
 </script>
 
-<style>
+<style lang="scss">
+  @import '@/assets/styles/typography.scss';
 
+  .logo a {
+    @include garamond-display-light;
+    text-decoration: none;
+  }
 </style>

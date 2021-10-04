@@ -36,3 +36,15 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+  nav {
+    float: right;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+</style>

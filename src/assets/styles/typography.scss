@@ -1,0 +1,36 @@
+@mixin garamond-regular {
+    font-family: garamond-premier-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin garamond-italic {
+    font-family: garamond-premier-pro, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin garamond-bold {
+    font-family: garamond-premier-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin garamond-bold-italic {
+    font-family: garamond-premier-pro, serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin garamond-display-light {
+    font-family: garamond-premier-pro-display, serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin garamond-display-light-italic {
+    font-family: garamond-premier-pro-display, serif;
+    font-weight: 300;
+    font-style: italic;
+}
+

@@ -21,7 +21,9 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "sass": "^1.42.1",
+    "sass-loader": "^10.1.1"
   },
   "postcss": {
     "plugins": {
