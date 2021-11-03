@@ -10,6 +10,18 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'years',
+      title: 'Years',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -22,10 +34,7 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      type: 'accessibleImage'
     },
     {
       name: 'category',

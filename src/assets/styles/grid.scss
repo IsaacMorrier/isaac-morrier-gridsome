@@ -52,7 +52,7 @@ $map-grid-props: (
 }
 
 .grid-container {
-  max-width: $breakpoint-xl * 1rem;
+  max-width: $breakpoint-xxl * 1rem;
   margin: 0 auto;
   padding: 0;
   &-fluid {
@@ -79,7 +79,7 @@ $map-grid-props: (
 }
 
 .grid-padding {
-  & > div {
+  & > * {
     padding-left: $global-gutter / 2;
     padding-right: $global-gutter / 2;
     @include breakpoint(lg) {

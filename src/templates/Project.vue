@@ -1,21 +1,17 @@
 <template>
   <Layout>
-    <div>
-      <header>
-        <h1>
+    <div class="grid-container-fluid">
+      <div class="row grid-padding">
+        <h1 class="col-3">
           {{ $page.project.title }}
         </h1>
-      </header>
-      <AppImage
-        v-if="$page.project.mainImage"
-        :main-image="$page.project.mainImage"
-      />
+        <p class="col-7 subtitle">{{ $page.project.subtitle }}</p>
+        <p class="col-2 year">{{ $page.project.years }}</p>
 
-      <div>
         <BlockContent :blocks="$page.project._rawBody" />
         <ProjectPagination
           :next="$page.next"
-          :next-image="$page.next.mainImage"
+          :next-image="$page.next.mainImage.image"
         />
       </div>
     </div>
@@ -23,16 +19,22 @@
 </template>
 
 <page-query>
-  query Post ($id: ID!, $nextID: ID!) {
+  query Project ($id: ID!, $nextID: ID!) {
 
     project: sanityProject (id: $id) {
       title
+      subtitle
+      years
       _rawBody
       mainImage {
-        asset {
-          id
-          localFile(width: 1400, quality: 80)
-          url
+        alt
+        caption
+        image {
+          asset {
+            id
+            localFile(width: 1400, quality: 80)
+            url
+          }
         }
       }
     }
@@ -43,10 +45,14 @@
       }
       title
       mainImage {
-        asset {
-          id
-          localFile(width: 400, quality: 60)
-          url
+        alt
+        caption
+        image {
+          asset {
+            id
+            localFile(width: 400, quality: 60)
+            url
+          }
         }
       }
     }

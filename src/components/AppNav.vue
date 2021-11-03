@@ -15,22 +15,18 @@ export default {
   data() {
     return {
       nav: [
+        // {
+        //   label: 'Projects',
+        //   to: '/',
+        // },
+        // {
+        //   label: 'Essays',
+        //   to: '/essays',
+        // },
         {
-          label: 'Projects',
-          to: '/',
-        },
-        {
-          label: 'Essays',
-          to: '/essays',
-        },
-        {
-          label: 'About',
-          to: '/about',
-        },
-        {
-          label: 'Contact',
-          to: '/contact',
-        },
+          label: 'info',
+          to: '/info',
+        }
       ],
     }
   },
@@ -38,13 +34,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  nav {
-    float: right;
+  @use "sass:math";
+  @import "src/assets/styles/variables.scss";
+  
+  ul {
+    padding: 0;
   }
   li {
-    list-style: none;
     display: inline-block;
-    padding: 1rem;
-    margin: 0 1rem;
+    padding: 0;
+    margin: 0;
+    a {
+      padding: 1rem 1rem 1rem math.div($global-gutter, 2);
+    }
   }
 </style>

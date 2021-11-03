@@ -28,11 +28,17 @@ query ($page: Int){
           current
         }
         title
+        subtitle
+        years
         mainImage {
-          asset {
-            id
-            localFile(width: 1100, quality: 80)
-            url
+          alt
+          caption
+          image {
+            asset {
+              id
+              localFile(width: 1100, quality: 80)
+              url
+            }
           }
         }
       }

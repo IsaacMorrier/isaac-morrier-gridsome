@@ -28,7 +28,7 @@
 </template>
 
 <page-query>
-  query Post ($id: ID!, $nextID: ID!, $prevID: ID!) {
+  query Essay ($id: ID!, $nextID: ID!, $prevID: ID!) {
 
     essay: sanityEssay (id: $id) {
       author {

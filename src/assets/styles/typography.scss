@@ -1,36 +1,65 @@
-@mixin garamond-regular {
-    font-family: garamond-premier-pro, serif;
+@mixin neue-haas-grotesk-regular {
+    font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-@mixin garamond-italic {
-    font-family: garamond-premier-pro, serif;
+@mixin neue-haas-grotesk-italic {
+    font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-style: italic;
 }
 
-@mixin garamond-bold {
-    font-family: garamond-premier-pro, serif;
+@mixin neue-haas-grotesk-medium {
+    font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin neue-haas-grotesk-medium-italic {
+    font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+@mixin neue-haas-grotesk-bold {
+    font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 
-@mixin garamond-bold-italic {
-    font-family: garamond-premier-pro, serif;
+@mixin neue-haas-grotesk-bold-italic {
+    font-family: neue-haas-grotesk-text, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-style: italic;
 }
 
-@mixin garamond-display-light {
-    font-family: garamond-premier-pro-display, serif;
-    font-weight: 300;
-    font-style: normal;
+body {
+    @include neue-haas-grotesk-bold;
+    color: var(--color-text);
+    font-size: 0.625rem;
 }
 
-@mixin garamond-display-light-italic {
-    font-family: garamond-premier-pro-display, serif;
-    font-weight: 300;
-    font-style: italic;
+header {
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
 }
 
+a {
+    &:hover {
+        color: var(--color-hover);
+    }
+    background: rgba(255, 0, 0, .03);
+}
+
+h1, h2 {
+    font-size: 0.625rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: .625rem;
+    margin-bottom: 0;
+}
