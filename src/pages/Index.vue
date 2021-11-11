@@ -1,18 +1,16 @@
 <template>
   <Layout>
     <ProjectList
-      :projects="loadedProjects"
+      v-if="$page.projects.edges.length"
+      :projects="$page.projects.edges"
     />
-    <ClientOnly>
-        <infinite-loading @infinite="infiniteHandler" spinner="spiral">
-          <div slot="no-more">
-            end.
-          </div>
-          <div slot="no-results">
-            No Projects
-          </div>
-        </infinite-loading>
-      </ClientOnly>
+    <div v-else>
+      <h3>Nothing here yet...</h3>
+    </div>
+    <Pager
+      ariaLabel="Projects pagination navigation"
+      :info="$page.projects.pageInfo"
+    />
   </Layout>
 </template>
 
@@ -50,44 +48,16 @@ query ($page: Int){
 </page-query>
 
 <script>
-// import { Pager } from 'gridsome'
+import { Pager } from 'gridsome'
 import ProjectList from '@/components/Project/ProjectList'
 
 export default {
   components: {
-    // Pager,
+    Pager,
     ProjectList,
   },
   metaInfo: {
-    title: 'Work',
+    title: 'Projects',
   },
-  data() {
-    return {
-      loadedProjects: [],
-      currentPage: 1
-    }
-  },
-  created() {
-    this.loadedProjects.push(...this.$page.projects.edges)
-  },
-  methods: {
-    async infiniteHandler($state) {
-      if (this.currentPage + 1 > this.$page.projects.pageInfo.totalPages) {
-        $state.complete()
-      } else {
-        const { data } = await this.$fetch(
-          `/${this.currentPage + 1}`
-        )
-        if (data.projects.edges.length) {
-          this.currentPage = data.projects.pageInfo.currentPage
-          this.loadedProjects.push(...data.projects.edges)
-          $state.loaded()
-        } else {
-          $state.complete()
-        }
-      }
-    }
-  }
-
 }
 </script>

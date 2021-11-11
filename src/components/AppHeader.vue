@@ -3,11 +3,8 @@
       <div class="row">
         <div class="logo col-7">
           <h1>
-            <g-link to="/">{{ $static.metadata.siteName }} — strategist, photographer, and designer currently in Washington, DC.</g-link>
+            <g-link to="/">{{ $static.metadata.siteName }} — artist, photographer, designer, and strategist currently in Washington, DC.</g-link>
           </h1> 
-          <!-- <p>
-            <g-link to="/">{{ Object.getOwnPropertyNames($page) }}</g-link>
-          </p>  -->
         </div>
         <div class="col-2 col-offset-3">
           <AppNav />
@@ -30,7 +27,7 @@ import AppNav from '@/components/AppNav.vue'
 export default {
   components: {
     AppNav,
-  }
+  },
 }
 </script>
 
@@ -42,8 +39,7 @@ export default {
     height: 10rem;
   }
 
-  .logo h1,
-  .logo p {
+  .logo h1 {
       font-size: 0.625rem;
       margin: 0;
       a {
