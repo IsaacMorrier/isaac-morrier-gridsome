@@ -33,11 +33,8 @@ export default {
   .row {
     margin-bottom: 7.5rem;
   }
-  .image-container div {
-    height: 80vw;
-    & > img {
-      height: 100%;
-      width: auto;
-    }
+  .image-container div img {
+    max-height: 80vw;
+    width: auto;
   }
 </style>

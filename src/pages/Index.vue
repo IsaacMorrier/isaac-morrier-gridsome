@@ -38,7 +38,7 @@ query ($page: Int){
           image {
             asset {
               id
-              localFile(width: 1100, quality: 80)
+              localFile(width: 1100, quality: 100)
               url
             }
           }
