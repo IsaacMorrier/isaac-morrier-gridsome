@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $map-grid-props: (
     '': 0,
     '-md': $breakpoint-md,
@@ -22,10 +24,10 @@ $map-grid-props: (
     }
     @for $i from 1 through $cols {
       .col#{$modifier}-#{$i} {
-        flex-basis: (100 / ($cols / $i) ) * 1%;
+        flex-basis: math.div(100, (math.div($cols, $i) ) ) * 1%;
       }
       .col#{$modifier}-offset-#{$i} {
-        margin-left: (100 / ($cols / $i) ) * 1%;
+        margin-left: math.div(100, (math.div($cols, $i) ) ) * 1%;
       }
     }
   }
@@ -69,22 +71,22 @@ $map-grid-props: (
     width: 100%;
     max-width: 100%;
     &.grid-padding {
-      padding-left: $global-margin - ($global-gutter / 2);
-      padding-right: $global-margin - ($global-gutter / 2);
+      padding-left: $global-margin - math.div($global-gutter, 2);
+      padding-right: $global-margin - math.div($global-gutter, 2);
       @include breakpoint(lg) {
-        padding-left: $global-margin-lg - ($global-gutter-lg / 2);;
-        padding-right: $global-margin-lg - ($global-gutter-lg / 2);;
+        padding-left: $global-margin-lg - math.div($global-gutter-lg, 2);
+        padding-right: $global-margin-lg - math.div($global-gutter-lg, 2);
       }
     }
 }
 
 .grid-padding {
   & > * {
-    padding-left: $global-gutter / 2;
-    padding-right: $global-gutter / 2;
+    padding-left: math.div($global-gutter, 2);
+    padding-right: math.div($global-gutter, 2);
     @include breakpoint(lg) {
-      padding-left: $global-gutter-lg / 2;
-      padding-right: $global-gutter-lg / 2;
+      padding-left: math.div($global-gutter-lg, 2);
+      padding-right: math.div($global-gutter-lg, 2);
     }
   }
 }
