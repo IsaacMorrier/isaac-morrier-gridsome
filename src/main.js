@@ -8,6 +8,7 @@ import '@/assets/styles/global.scss'
 
 import urlForImage from '@/utils/urlForImage'
 import DefaultLayout from '@/layouts/Default.vue'
+import InfiniteLoading from 'vue-infinite-loading'
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -15,6 +16,9 @@ export default function(Vue, { router, head, isClient }) {
 
   // Inject global image URL builder
   Vue.prototype.$urlForImage = urlForImage
+
+  // Add Infinite Loading
+  Vue.use(InfiniteLoading)
 
   // Add Typekit Fonts
   head.link.push({

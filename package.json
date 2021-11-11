@@ -17,7 +17,8 @@
     "gridsome-source-sanity": "^1.0.5",
     "postcss": "^8.1.14",
     "sanity-blocks-vue-component": "^0.1.0",
-    "vue-feather-icons": "^5.1.0"
+    "vue-feather-icons": "^5.1.0",
+    "vue-infinite-loading": "^2.4.5"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
