@@ -7,8 +7,12 @@ const createPagesQuery = gql`
         node {
           id
           mainImage {
-            asset {
-              id
+            alt
+            caption
+            image {
+              asset {
+                id
+              }
             }
           }
           slug {

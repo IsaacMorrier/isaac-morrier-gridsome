@@ -38,10 +38,14 @@
       publishedAt(format: "MMMM D, YYYY")
       _rawBody
       mainImage {
-        asset {
-          id
-          localFile(width: 1400, quality: 80)
-          url
+        alt
+        caption
+        image {
+          asset {
+            id
+            localFile(width: 1400, quality: 80)
+            url
+          }
         }
       }
     }

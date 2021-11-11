@@ -13,6 +13,14 @@ export default {
             }
         },
         {
+            name: 'caption',
+            type: 'string',
+            title: 'Caption',
+            options: {
+                isHighlighted: true // <-- make this field easily accessible
+            }
+        },
+        {
             name: 'alt',
             type: 'string',
             title: 'Alt',
@@ -20,13 +28,12 @@ export default {
                 isHighlighted: true // <-- make this field easily accessible
             }
         },
-        {
-            name: 'caption',
-            type: 'string',
-            title: 'Caption',
-            options: {
-                isHighlighted: true // <-- make this field easily accessible
-            }
+    ],
+    preview: {
+        select: {
+            title: 'alt',
+            subtitle: 'caption',
+            media: 'image',
         }
-    ]
+    },
 }

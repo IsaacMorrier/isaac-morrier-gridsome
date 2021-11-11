@@ -25,6 +25,14 @@ hr {
     border-left: none;
 }
 
+figure {
+    margin: 0;
+    padding-bottom: $global-gutter - .1875rem;
+    @include breakpoint(lg) {
+      padding-bottom: $global-gutter-lg - .1875rem;
+    }
+}
+
 img {
     max-width: 100%;
 }

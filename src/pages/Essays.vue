@@ -33,10 +33,14 @@
           title
           publishedAt(format: "MMMM D, YYYY")
           mainImage {
-            asset {
-              id
-              localFile(width: 660, quality: 80)
-              url
+            alt
+            caption
+            image {
+              asset {
+                id
+                localFile(width: 1100, quality: 80)
+                url
+              }
             }
           }
         }

@@ -9,7 +9,7 @@
 </template>
 
 <static-query>
-  {
+  query {
     metadata {
       sanityOptions {
         projectId
@@ -62,7 +62,42 @@ export default {
 
               return (
                 <figure>
-                  <g-image src={node.localFile} />
+                  <g-image src={node.localFile} alt={node.alt}/>
+                </figure>
+              )
+            }
+
+            return (
+              <figure>
+                <img
+                  src={this.$urlForImage(
+                    node,
+                    this.$static.metadata.sanityOptions
+                  )
+                    .auto('format')
+                    .quality(80)
+                    .url()}
+                  alt={node.alt}
+                />
+              </figure>
+            )
+          },
+          accessibleImage: ({ node }) => {
+            const alt = node.alt;
+            const localImage = this.$static.localImages.edges.find(
+              ({ node: localImage }) => {
+                if (localImage.id === node.image.asset._ref) {
+                  return localImage
+                }
+              }
+            )
+
+            if (localImage) {
+              const { node } = localImage
+
+              return (
+                <figure>
+                  <g-image src={node.localFile} alt={alt}/>
                 </figure>
               )
             }
@@ -88,66 +123,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-h1 {
-  @apply text-3xl leading-none;
-}
-h2 {
-  @apply text-2xl leading-tight;
-}
-h3 {
-  @apply text-xl leading-tight;
-}
-h4 {
-  @apply text-lg leading-snug;
-}
-h5 {
-  @apply text-base leading-normal;
-}
-h6 {
-  @apply text-sm leading-normal;
-}
-
-blockquote {
-  @apply border-l-4 border-primary italic pl-4 mb-8 text-lg text-gray;
-}
-
-figure {
-  @apply mb-8;
-}
-
-ul {
-  @apply list-disc ml-4 pb-4;
-}
-
-li {
-  @apply leading-tight text-base mb-4;
-}
-
-p {
-  @apply leading-relaxed text-base mb-8;
-}
-
-@screen lg {
-  h1 {
-    @apply text-5xl;
-  }
-  h2 {
-    @apply text-4xl;
-  }
-  h3 {
-    @apply text-3xl;
-  }
-  h4 {
-    @apply text-2xl;
-  }
-  h5 {
-    @apply text-xl;
-  }
-  h6,
-  p {
-    @apply text-lg;
-  }
-}
-</style>

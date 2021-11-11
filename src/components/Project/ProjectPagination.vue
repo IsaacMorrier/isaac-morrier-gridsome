@@ -1,9 +1,12 @@
 <template>
   <div>
     <g-link :to="`${next.slug.current}`">
+        <h1 class="col-3">
+          {{ next.title }}
+        </h1>
+        <p class="col-7 subtitle">{{ next.subtitle }}</p>
+        <p class="col-2 year">{{ next.years }}</p>
       <AppImage :main-image="nextImage" />
-      <p>next</p>
-      <h2>{{ next.title }}</h2>
     </g-link>
   </div>
 </template>

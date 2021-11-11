@@ -3,7 +3,7 @@
     <div>
       <g-link :to="essayUrl">
         <AppImage
-          :main-image="essay.mainImage"
+          :main-image="essay.mainImage.image"
           placeholder
         />
       </g-link>

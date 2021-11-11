@@ -32,7 +32,7 @@
         image {
           asset {
             id
-            localFile(width: 1400, quality: 80)
+            localFile(width: 1860, quality: 80)
             url
           }
         }
@@ -50,7 +50,7 @@
         image {
           asset {
             id
-            localFile(width: 400, quality: 60)
+            localFile(width: 1860, quality: 80)
             url
           }
         }
